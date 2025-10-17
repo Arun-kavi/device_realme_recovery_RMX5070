@@ -5,11 +5,11 @@
 | SoC                     | Qualcomm Snapdragon 6 Gen 4 (4 nm)                          |
 | GPU                     | Adreno 810                                                  |
 | Shipped Android version | Android 15 with Realme UI 6                                 |
-| CPU Octa-core (1x2.3 GHz Cortex-A720s & 3x2.2 GHz Cortex-A720s & 4x1.8 GHz Cortex-A520s)|
+| CPU Octa-core (1x2.3 GHz Cortex-A720s & 3x2.2 GHz Cortex-A720s 4x1.8 GHz Cortex-A520s)|
 | Memory                  | 6/8 GB RAM                                                  |
 | Storage                 | (128/256) / 256 GB                                          |
 | Battery                 | Non-removable Li-Po 6000 mAh                                |
-| Display                 | 1080 x 2400 pixels, 20:9 ratio, 6.67 inches AMOLED (~398 ppi density) |
+| Display                 | 1080 x 2400 pixels, 20:9 ratio (~395 ppi density)           |
 
 
 ## Device picture
