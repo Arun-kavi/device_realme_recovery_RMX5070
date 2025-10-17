@@ -16,10 +16,10 @@
 # The below variables will be generated automatically
 
 # Define hardware platform
-PRODUCT_RELEASE_NAME := lisa
+PRODUCT_RELEASE_NAME := RMX5070
 
 # Device path for OEM device tree
-DEVICE_PATH := device/xiaomi/$(PRODUCT_RELEASE_NAME)
+DEVICE_PATH := device/realme/$(PRODUCT_RELEASE_NAME)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
