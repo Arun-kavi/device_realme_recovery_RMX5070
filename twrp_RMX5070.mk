@@ -31,12 +31,12 @@ $(call inherit-product-if-exists, $(DEVICE_PATH)/fox_$(PRODUCT_RELEASE_NAME).mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 
-## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
-PRODUCT_NAME := $(CUSTOM_VENDOR)_$(PRODUCT_DEVICE)
-PRODUCT_BRAND := $(BOARD_VENDOR)
-PRODUCT_MODEL := $(shell echo $(PRODUCT_BRAND) | tr  '[:lower:]' '[:upper:]')_$(PRODUCT_DEVICE)
-PRODUCT_MANUFACTURER := $(PRODUCT_BRAND)
+# Device identifier
+PRODUCT_DEVICE := RMX5070
+PRODUCT_NAME := twrp_RMX5070
+PRODUCT_BRAND := realme
+PRODUCT_MODEL := RMX5070
+PRODUCT_MANUFACTURER := realme
 TW_DEVICE_VERSION := Pain..
 
 # Device path for OEM device tree
