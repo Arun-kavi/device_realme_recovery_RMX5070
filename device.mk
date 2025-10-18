@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 
 # API Level
-PRODUCT_SHIPPING_API_LEVEL := 34
+#PRODUCT_SHIPPING_API_LEVEL := 34
 # A/B
 ENABLE_VIRTUAL_AB := true
 AB_OTA_UPDATER := true
