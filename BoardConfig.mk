@@ -84,14 +84,36 @@ TW_INCLUDE_PYTHON := true
 # Security patch level
 VENDOR_SECURITY_PATCH := 2025-08-01
 
+# Essential recovery libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
+    android.hidl.allocator@1.0 \
+    android.hidl.memory@1.0 \
+    android.hidl.memory.token@1.0 \
+    libdmabufheap \
+    libhidlmemory \
     libion \
-    libandroidicu \
-    libdrm \
-    liblog
+    libnetutils \
+    libxml2 \
+    vendor.display.config@1.0 \
+    vendor.display.config@2.0
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.allocator@1.0.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.memory@1.0.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.memory.token@1.0.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libdmabufheap.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libhidlmemory.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libandroidicu.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libdrm.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/liblog.so
+    $(TARGET_OUT_SHARED_LIBRARIES)/libnetutils.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so
+
+# Kernel modules
+TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko camera.ko leds-qpnp-vibrator-ldo.ko"
+TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
+
+# Haptics support
+TW_SUPPORT_INPUT_AIDL_HAPTICS := true
+TW_SUPPORT_INPUT_AIDL_HAPTICS_FIX_OFF := true
+TW_SUPPORT_INPUT_AIDL_HAPTICS_FQNAME := "IVibrator/default"
