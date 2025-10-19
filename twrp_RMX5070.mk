@@ -19,7 +19,7 @@
 PRODUCT_RELEASE_NAME := RMX5070
 
 # Device path for OEM device tree
-DEVICE_PATH := device/realme/$(PRODUCT_RELEASE_NAME)
+DEVICE_PATH := device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -37,6 +37,3 @@ PRODUCT_NAME := twrp_RMX5070
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX5070
 PRODUCT_MANUFACTURER := realme
-
-# Device path for OEM device tree
-DEVICE_PATH := device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)
